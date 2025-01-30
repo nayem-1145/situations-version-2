@@ -275,15 +275,24 @@
     }
 
 
+    
     function updateWordCount() {
-        let text = $("#step_message").val().trim();
-        let words = text.length;
-        $(".word-count").text(words); 
+
+        if( $("#step_message").length > 0 ) {
+
+            let text = $("#step_message").val();
+            let words = text.length;
+            $(".word-count").text(words); 
+
+        }
+
+        
     }
 
     $("#step_message").on("input", updateWordCount);
 
     updateWordCount();
+    
 
     $(".form_step_field_item ul li label").each(function(){
         
