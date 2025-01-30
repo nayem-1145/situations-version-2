@@ -252,7 +252,7 @@
     
         let passcodeInput = document.getElementById("passcodeInput").value.trim();
     
-        fetch("../../passcodes.json")
+        fetch("https://nayem-1145.github.io/situations-version-2/passcodes.json")
             .then(response => response.json())
             .then(data => {
                 if (data.passcodes.includes(passcodeInput)) {
